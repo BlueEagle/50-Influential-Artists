@@ -1,0 +1,24 @@
+header {
+  padding: 5%;
+  .flex-center();
+
+  nav {
+    display: flex;
+    justify-content: center;
+    a {
+      .flex-center();
+      padding: 0 5%;
+      font-size: 2rem;
+      color: @link-text-color;
+      text-decoration: none;
+
+      &:nth-of-type(1) {
+        font-weight: bold;
+        border-right: .1rem solid @link-text-color;
+      }
+      &:nth-of-type(2) {
+        border-right: .1rem solid @link-text-color;
+      }
+    }
+  }
+}
