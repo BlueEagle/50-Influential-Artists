@@ -283,11 +283,16 @@ function addArtist(artists, addtionalInfo){
 
 /* STRETCH 1: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born the 20th century (1800-1900) */
 
-function get20s(/* Code here */){
-
-    /* Code here */
-
+function get20s(data){
+  let twentiethCenturyArtists = [];
+  for (let artist of data) {
+    let yearsString = artist.years;
+    yearsString = yearsString.split(' ')[0];
+    if (Math.floor(yearsString/100) === 18 || Math.floor(yearsString/100) === 17) twentiethCenturyArtists.push(artist);
   }
+  return twentiethCenturyArtists;
+}
+console.log(get20s(artists));
 
 /* STRETCH 2: Programtically console.log HTML element structure 
 
