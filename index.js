@@ -260,7 +260,8 @@ function lotsOfArt(artists){
 // console.log(lotsOfArt(artists));
 
 
-/* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
+/* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. 
+Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
 id: 21
 name: Your Name Here, 
@@ -269,12 +270,22 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(artists, addtionalInfo){
-  for (let item of addtionalInfo) {
-    artists.push(item);
-  }
+function addArtist(artists, additionalInfo){
+  artists.push(additionalInfo);
+  return artists;
 }
 
+let me = {
+  id: 21,
+  name: "Collin", 
+  years: "1996 - 2020",
+  genre: "some genre", 
+  nationality: "some nationality",
+  bio: "two sentences"
+};
+
+let newArtists = addArtist(artists, me)
+console.log(newArtists);
 
 
 
@@ -292,7 +303,7 @@ function get20s(data){
   }
   return twentiethCenturyArtists;
 }
-console.log(get20s(artists));
+// console.log(get20s(artists));
 
 /* STRETCH 2: Programtically console.log HTML element structure 
 
