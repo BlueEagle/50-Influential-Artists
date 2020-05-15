@@ -1,0 +1,20 @@
+.flex-center(@direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: @direction;
+}
+
+.btn(@bg-color: white, @color:@default-font-color, @font-size: 1.4rem) {
+  font-size: @font-size;
+  padding: 1% 3%;
+  color: @color;
+  background-color: @bg-color;
+  border-radius: 5px;
+  box-shadow: 0 0 3px @link-text-color;
+}
+
+.link-clean(@color: @default-font-color) {
+  color: @color;
+  text-decoration: none;
+}
