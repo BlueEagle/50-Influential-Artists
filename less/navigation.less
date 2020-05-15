@@ -1,16 +1,14 @@
 header {
-  padding: 5%;
+  padding: 3%;
   .flex-center();
 
   nav {
-    display: flex;
-    justify-content: center;
+    .flex-center();
     a {
       .flex-center();
       padding: 0 5%;
       font-size: 2rem;
-      color: @link-text-color;
-      text-decoration: none;
+      .link-clean(@link-text-color);
 
       &:nth-of-type(1) {
         font-weight: bold;

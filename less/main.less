@@ -1,0 +1,51 @@
+.title-container {
+  .flex-center(column);
+  width: 100%;
+
+  .img-box {
+    .flex-center(column);
+    height: 55vh;
+    width: 85%;
+    background-image: url("/assets/home.png");
+    background-position: center;
+
+    * {
+      margin: .5%;
+    }
+    h1 {
+      text-align: center;
+    }
+    button {
+      .btn();
+    }
+  }
+
+  hr {
+    width: 90%;
+    margin-top: 3%;
+    border-top: .2rem solid @horizontal-rul-color;
+  }
+}
+
+.artists-container {
+  width: 90%;
+  padding: 2% 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  .artist {
+    flex-basis: 50%;
+    .flex-center(column);
+
+    img {
+      width: 70%;
+      border-radius: 2%;
+    }
+    a {
+      font-size: 1.6rem;
+      line-height: 3;
+      .link-clean();
+    }
+  }
+}
