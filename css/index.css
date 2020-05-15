@@ -88,8 +88,9 @@ video {
 }
 body {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
   font-family: 'Raleway', sans-serif;
   color: #060707;
 }
@@ -98,12 +99,23 @@ h1 {
   font-weight: bold;
   color: #FEFEFE;
 }
+@media (max-width: 500px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
 header {
+  width: 100%;
   padding: 3%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+}
+@media (max-width: 500px) {
+  header {
+    padding: 5% 0;
+  }
 }
 header nav {
   display: flex;
@@ -121,12 +133,17 @@ header nav a {
   color: #4A4A4A;
   text-decoration: none;
 }
+@media (max-width: 500px) {
+  header nav a {
+    font-size: 1rem;
+  }
+}
 header nav a:nth-of-type(1) {
   font-weight: bold;
-  border-right: 0.1rem solid #4A4A4A;
+  border-right: 1px solid #4A4A4A;
 }
 header nav a:nth-of-type(2) {
-  border-right: 0.1rem solid #4A4A4A;
+  border-right: 1px solid #4A4A4A;
 }
 .title-container {
   display: flex;
@@ -145,6 +162,12 @@ header nav a:nth-of-type(2) {
   background-image: url("/assets/home.png");
   background-position: center;
 }
+@media (max-width: 500px) {
+  .title-container .img-box {
+    width: 100%;
+    background-size: 200%;
+  }
+}
 .title-container .img-box * {
   margin: 0.5%;
 }
@@ -159,10 +182,25 @@ header nav a:nth-of-type(2) {
   border-radius: 5px;
   box-shadow: 0 0 3px #4A4A4A;
 }
+@media (max-width: 500px) {
+  .title-container .img-box button {
+    font-size: 1rem;
+    padding: 1% 3%;
+    color: #060707;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #4A4A4A;
+  }
+}
 .title-container hr {
   width: 90%;
   margin-top: 3%;
   border-top: 0.2rem solid #C1C1BF;
+}
+@media (max-width: 500px) {
+  .title-container hr {
+    width: 100%;
+  }
 }
 .artists-container {
   width: 90%;
@@ -171,6 +209,12 @@ header nav a:nth-of-type(2) {
   justify-content: center;
   align-items: flex-start;
 }
+@media (max-width: 500px) {
+  .artists-container {
+    flex-direction: column;
+    padding-bottom: 15%;
+  }
+}
 .artists-container .artist {
   flex-basis: 50%;
   display: flex;
@@ -178,13 +222,39 @@ header nav a:nth-of-type(2) {
   align-items: center;
   flex-direction: column;
 }
+@media (max-width: 500px) {
+  .artists-container .artist {
+    margin: 5% 0;
+  }
+}
 .artists-container .artist img {
-  width: 70%;
-  border-radius: 2%;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .artists-container .artist img {
+    height: 200px;
+  }
 }
 .artists-container .artist a {
   font-size: 1.6rem;
   line-height: 3;
   color: #060707;
   text-decoration: none;
+}
+@media (max-width: 500px) {
+  .artists-container .artist a {
+    font-size: 1rem;
+  }
+}
+.artists-container .artist .bio {
+  width: 90%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .artists-container .artist .bio {
+    width: 65%;
+    font-size: 0.7rem;
+  }
 }

@@ -9,6 +9,10 @@
     background-image: url("/assets/home.png");
     background-position: center;
 
+    @media @mobile {
+      width: 100%;
+      background-size: 200%;
+    }
     * {
       margin: .5%;
     }
@@ -16,7 +20,11 @@
       text-align: center;
     }
     button {
-      .btn();
+      .btn(white, @default-font-color);
+
+      @media @mobile {
+        .btn(@font-size: 1rem, @color:@default-font-color);
+      }
     }
   }
 
@@ -24,6 +32,10 @@
     width: 90%;
     margin-top: 3%;
     border-top: .2rem solid @horizontal-rul-color;
+
+    @media @mobile {
+      width: 100%;
+    }
   }
 }
 
@@ -34,18 +46,43 @@
   justify-content: center;
   align-items: flex-start;
 
+  @media @mobile {
+    flex-direction: column;
+    padding-bottom: 15%;
+  }
   .artist {
     flex-basis: 50%;
     .flex-center(column);
 
+    @media @mobile {
+      margin: 5% 0;
+    }
     img {
-      width: 70%;
-      border-radius: 2%;
+      height: 300px;
+      object-fit: contain;
+      border-radius: 10px;
+      
+      @media @mobile {
+        height: 200px;
+      }
     }
     a {
       font-size: 1.6rem;
       line-height: 3;
       .link-clean();
+
+      @media @mobile {
+        font-size: 1rem;
+      }
+    }
+    .bio {
+      width: 90%;
+      text-align: center;
+
+      @media @mobile {
+        width: 65%;
+        font-size: .7rem;
+      }
     }
   }
 }
