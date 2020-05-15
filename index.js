@@ -269,11 +269,11 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+function addArtist(artists, addtionalInfo){
+  for (let item of addtionalInfo) {
+    artists.push(item);
   }
+}
 
 
 
